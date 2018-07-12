@@ -18,7 +18,7 @@ def follow(syslog_file):
     while True:
         line = syslog_file.readline()
         if not line:
-            time.sleep(0.1)  # Sleep briefly
+            time.sleep(0.5)  # Sleep briefly
             continue
         elif phrase in line:
             yield line # Gather lines which contain the phrase
